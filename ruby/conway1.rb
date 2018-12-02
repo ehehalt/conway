@@ -131,4 +131,4 @@ def performance(loops)
   end
 end
 
-Performance(1000)
+performance(1000)

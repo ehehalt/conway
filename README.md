@@ -10,7 +10,8 @@ Write a basic conway game of life in different programming languages with differ
 
 Performance test with a 100x100 grid, 1 glider and 1000 rounds.
 
-| Language | Duration |
-|----------|----------|
-| Ruby 1   | 25,38s   |
+| Language  | Duration |
+|-----------|----------|
+| Ruby 1    | 25,38s   |
+| Crystal 1 |  0,67s   |
 

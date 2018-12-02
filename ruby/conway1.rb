@@ -93,22 +93,42 @@ class Game
   end
 end
 
-game = Game.new(8,8)
+def Play()
+  game = Game.new(8,8)
 
-# set a glider
-game.grid.set(0,0,1)
-game.grid.set(1,1,1)
-game.grid.set(2,1,1)
-game.grid.set(0,2,1)
-game.grid.set(1,2,1)
+  # set a glider
+  game.grid.set(0,0,1)
+  game.grid.set(1,1,1)
+  game.grid.set(2,1,1)
+  game.grid.set(0,2,1)
+  game.grid.set(1,2,1)
 
-# play conway
-while true
-  system("clear")
-  puts "Conway's Game on a #{game.grid.width}x#{game.grid.height} board:"
-  puts
-  puts game.grid.to_s
-  game.step
-  sleep(0.1)
+  # play conway
+  while true
+    system("clear")
+    puts "Conway's Game on a #{game.grid.width}x#{game.grid.height} board:"
+    puts
+    puts game.grid.to_s
+    game.step
+    sleep(0.1)
+  end
 end
 
+def Performance(loops)
+  game = Game.new(100, 100)
+
+  # set a glider
+  game.grid.set(0,0,1)
+  game.grid.set(1,1,1)
+  game.grid.set(2,1,1)
+  game.grid.set(0,2,1)
+  game.grid.set(1,2,1)
+
+  idx = 0
+  while idx < loops
+    game.step
+    idx += 1
+  end
+end
+
+Performance(1000)

@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Conway Game of Life
 
 # Grid class use a 1D array to simulate 2D matrix
@@ -43,7 +41,7 @@ class Grid
     count = 0
     (-1..1).each do | delta_row |
       (-1..1).each do | delta_column |
-        unless delta_row == 0 and delta_column == 0
+        unless delta_row == 0 && delta_column == 0
           current_row = row + delta_row
           current_column = column + delta_column
           count += 1 if is_alive(current_row, current_column)
@@ -52,8 +50,6 @@ class Grid
     end
     count
   end
-
-private
 
   # First version of idx use overflow hard coded,
   # not configurable
@@ -79,7 +75,7 @@ class Game
       (0...grid.height).each do | column |
         neighbors = grid.get_neighbors(row, column)
         if grid.is_alive(row, column)
-          if neighbors >= 2 and neighbors <= 3
+          if neighbors >= 2 && neighbors <= 3
             new_grid.set(row, column, 1)
           end
         else
@@ -93,7 +89,7 @@ class Game
   end
 end
 
-def play()
+def play
   game = Game.new(8,8)
 
   # set a glider

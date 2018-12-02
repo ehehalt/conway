@@ -3,12 +3,12 @@
 # Grid class use a 1D array to simulate 2D matrix
 class Grid
 
-  attr_reader :width, :height
+  getter :width, :height
   
   def initialize(width=9, height=9)
     @width = width
     @height = height
-    @cells = Array.new(@width * @height, 0)
+    @cells = Array(Int32).new(@width * @height, 0)
     @alive_symbol = "*"
     @dead_symbol = " "
   end
@@ -63,7 +63,7 @@ end
 
 class Game
 
-  attr_reader :grid
+  getter :grid
 
   def initialize(width=9, heigh=9)
     @grid = Grid.new(width, heigh)
@@ -127,4 +127,4 @@ def performance(loops)
   end
 end
 
-Performance(1000)
+performance(1000)

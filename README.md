@@ -13,6 +13,7 @@ Write a basic Conway Game of Life game in different programming languages with d
 - Elixir (planned)
 - [Go](/go/README.md)
 - Nim (planned)
+- Perl (planned)
 - Python (planned)
 - [Ruby](/ruby/README.md)
 - Rust (planned)
@@ -27,9 +28,9 @@ The first solution (for example *Ruby 1*) works with two classes, one for the gr
 
 Benchmark test with a 100x100 grid, 1 glider and 1000 rounds.
 
-| Language  | Duration |
-|-----------|---------:|
-| Crystal 1 |  0,67s   |
-| Go 1      |  2,17s   |
-| Ruby 1    | 25,38s   |
-| Swift 1   |  2,41s   |
+| Language  | Duration | LoC |
+|-----------|---------:|----:|
+| Crystal 1 |  0,67s   | 130 |
+| Go 1      |  2,17s   | 165 |
+| Ruby 1    | 25,38s   | 134 |
+| Swift 1   |  2,41s   | 142 |

@@ -18,7 +18,7 @@ Write a basic Conway Game of Life game in different programming languages with d
 - [Ruby](/ruby/README.md)
 - Rust (planned)
 - Scheme (planned)
-- Swift (planned)
+- [Swift](/swift/README.md)
 
 ## Solutions
 

@@ -4,6 +4,8 @@ Write a basic Conway Game of Life game in different programming languages with d
 
 ## Languages
 
+- C (planned)
+- C++ (planned)
 - [Crystal](/crystal/README.md)
 - Common Lisp (planned)
 - CSharp (planned)
@@ -30,3 +32,4 @@ Benchmark test with a 100x100 grid, 1 glider and 1000 rounds.
 | Crystal 1 |  0,67s   |
 | Go 1      |  2,17s   |
 | Ruby 1    | 25,38s   |
+| Swift 1   |  2,41s   |

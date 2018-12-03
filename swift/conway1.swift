@@ -1,3 +1,11 @@
+//
+//  main.swift
+//  Conway
+//
+//  Created by Michael Ehehalt on 03.12.18.
+//  Copyright © 2018 Michael Ehehalt. All rights reserved.
+//
+
 import Foundation
 
 class Grid : CustomStringConvertible {
@@ -67,7 +75,68 @@ class Grid : CustomStringConvertible {
   }
 }
 
-var grid = Grid(width: 10, height: 10)
-grid.set(x: 1, y: 1, value: 1)
-grid.set(x: -1, y: -1, value: 1)
-print(grid)
+class Game {
+  var grid : Grid
+  
+  init(width: Int, height: Int) {
+    grid = Grid(width: width, height: height)
+  }
+  
+  func step() {
+    let newGrid = Grid(width: grid.width, height: grid.height)
+    for row in 0..<grid.height {
+      for col in 0..<grid.width {
+        let neighbors = grid.getNeighbors(x: col, y: row)
+        if grid.isAlive(x: col, y: row) {
+          if neighbors >= 2 && neighbors <= 3 {
+            newGrid.set(x: col, y: row, value: 1)
+          }
+        } else {
+          if neighbors == 3 {
+            newGrid.set(x: col, y: row, value: 1)
+          }
+        }
+      }
+    }
+    grid = newGrid
+  }
+}
+
+func play() {
+  let game = Game(width: 8, height: 8)
+  
+  // set a glider
+  game.grid.set(x: 0, y: 0, value: 1)
+  game.grid.set(x: 1, y: 1, value: 1)
+  game.grid.set(x: 2, y: 1, value: 1)
+  game.grid.set(x: 0, y: 2, value: 1)
+  game.grid.set(x: 1, y: 2, value: 1)
+
+  // play conway
+  while true {
+    print("\u{001B}[2J")
+    print("Conway's Game on a \(game.grid.width)x\(game.grid.height) board:")
+    print("")
+    print(game.grid)
+    game.step()
+    usleep(100000)
+  }
+}
+
+func benchmark() {
+  let game = Game(width: 100, height: 100)
+  
+  // set a glider
+  game.grid.set(x: 0, y: 0, value: 1)
+  game.grid.set(x: 1, y: 1, value: 1)
+  game.grid.set(x: 2, y: 1, value: 1)
+  game.grid.set(x: 0, y: 2, value: 1)
+  game.grid.set(x: 1, y: 2, value: 1)
+  
+  // play conway
+  for _ in 0..<1000 {
+    game.step()
+  }
+}
+
+benchmark()

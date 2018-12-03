@@ -23,7 +23,7 @@ The first solution (for example *Ruby 1*) works with two classes, one for the gr
 
 ## Benchmarks
 
-Performance test with a 100x100 grid, 1 glider and 1000 rounds.
+Benchmark test with a 100x100 grid, 1 glider and 1000 rounds.
 
 | Language  | Duration |
 |-----------|---------:|

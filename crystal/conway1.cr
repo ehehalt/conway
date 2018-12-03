@@ -110,7 +110,7 @@ def play
   end
 end
 
-def performance(loops)
+def benchmark(loops)
   game = Game.new(100, 100)
 
   # set a glider
@@ -127,4 +127,4 @@ def performance(loops)
   end
 end
 
-performance(1000)
+benchmark(1000)

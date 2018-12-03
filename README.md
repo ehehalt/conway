@@ -5,8 +5,17 @@ Write a basic Conway Game of Life game in different programming languages with d
 ## Languages
 
 - [Crystal](/crystal/README.md)
+- Common Lisp (planned)
+- CSharp (planned)
+- Elisp (planned)
+- Elixir (planned)
 - [Go](/go/README.md)
+- Nim (planned)
+- Python (planned)
 - [Ruby](/ruby/README.md)
+- Rust (planned)
+- Scheme (planned)
+- Swift (planned)
 
 ## Solutions
 

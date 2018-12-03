@@ -5,6 +5,7 @@ Write a basic Conway Game of Life game in different programming languages with d
 ## Languages
 
 - [Crystal](/crystal/README.md)
+- [Go](/go/README.md)
 - [Ruby](/ruby/README.md)
 
 ## Solutions

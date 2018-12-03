@@ -9,7 +9,7 @@ Write a basic Conway Game of Life game in different programming languages with d
 
 ## Solutions
 
-The first solution (for example *Ruby 1*) works with two classes, one for the grid and one for the game. The grid class is a 2D interface on an 1D array.
+The first solution (for example *Ruby 1*) works with two classes, one for the grid and one for the game. The grid class use a array to store the cell information.
 
 ## Benchmarks
 

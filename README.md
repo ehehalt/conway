@@ -19,4 +19,5 @@ Performance test with a 100x100 grid, 1 glider and 1000 rounds.
 | Language  | Duration |
 |-----------|---------:|
 | Crystal 1 |  0,67s   |
+| Go 1      |  2,17s   |
 | Ruby 1    | 25,38s   |

@@ -1,4 +1,4 @@
-# Conway's Game of Life Challenge
+# Conway's "Game of Life", written in different languages
 
 Write a basic Conway Game of Life game in different programming languages with different goals (fast execution, elegant code or small codebase).
 
